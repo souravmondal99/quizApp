@@ -10,6 +10,7 @@ This is a demo LWC App which contains a collection of different quizzes of Sales
 
 
 ## Features : 
+
  - All the questions and answers are in MCQ format
  - Reset button to reset the answer selections
  - Submit button to show obtained Score
@@ -18,4 +19,13 @@ This is a demo LWC App which contains a collection of different quizzes of Sales
    - Green - when all 4 answers are right
    - Red - when all 4 answers are not right
 
-## SFDC Topics Covered :
+## LWC Topics Covered :
+
+ 1. HTML Layout
+ 2. Component creation
+ 3. if:true directive
+ 4. Looping - for:each
+ 5. Getter
+ 6. Methods
+ 7. Properties
+ 8. Form Submit and Reset
