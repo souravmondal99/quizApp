@@ -23,9 +23,10 @@ This is a demo LWC App which contains a collection of different quizzes of Sales
 
  1. HTML Layout
  2. Component creation
- 3. if:true directive
- 4. Looping - for:each
- 5. Getter
- 6. Methods
- 7. Properties
- 8. Form Submit and Reset
+ 3. Data Binding
+ 4. Directive - if:true 
+ 5. Template Looping - for:each
+ 6. Getter
+ 7. Methods
+ 8. Properties
+ 9. Form Submit and Reset
