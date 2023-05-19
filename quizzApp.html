@@ -1,0 +1,55 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Quiz App in LWC">
+
+        <form action="">
+            <template for:each={questions} for:item="quiz">
+                <ul key={quiz.id} class="slds-m-around_medium  slds-has-dividers_around-space">
+                    <li class="slds-item"><strong>{quiz.id}. {quiz.question} </strong></li>
+                    <li>
+                        <ul class="slds-is-nested">
+                            <li><input type="radio" name={quiz.id} value='a' style="margin-right: 5px;"
+                                    onchange={radioHandler} />{quiz.answers.a}
+                            </li>
+                            <li><input type="radio" name={quiz.id} value='b' style="margin-right: 5px;"
+                                    onchange={radioHandler} />{quiz.answers.b}
+                            </li>
+                            <li><input type="radio" name={quiz.id} value='c' style="margin-right: 5px;"
+                                    onchange={radioHandler} />{quiz.answers.c}
+                            </li>
+                            <li><input type="radio" name={quiz.id} value='d' style="margin-right: 5px;"
+                                    onchange={radioHandler} />{quiz.answers.d}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </template>
+
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <span><lightning-button type="submit" disabled={disableButton} variant="brand" label="Submit"
+                            title="Primary action" onclick={handleSubmit}
+                            class="slds-float_right"></lightning-button></span>
+                </div>
+                <div class="slds-col">
+                    <span><lightning-button type="reset" variant="brand" label="Reset" title="Primary action"
+                            onclick={handleReset} class="slds-float_left"></lightning-button></span>
+                </div>
+            </div>
+
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <template if:true={showResult}>
+                        <strong class="slds-text-align_center slds-text-heading_large">
+                            <div class={isScoredFull}>Your Score : {correctAns} out of
+                                {questions.length}
+                            </div>
+                        </strong>
+                    </template>
+                </div>
+            </div>
+
+        </form>
+    </lightning-card>
+</template>
